@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="E-SERVE Nexus — smart dining and seamless restaurant service.">
+  <title>E-SERVE Nexus | Smart Dining</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/socket.io/socket.io.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="E-SERVE Nexus home">
+      <span class="brand-mark">E</span>
+      <span>E-SERVE <b>NEXUS</b><small>SMART DINING · SEAMLESS SERVICE</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <button class="nav-button active" data-view="customer">Order food</button>
+      <button class="nav-button" data-view="kitchen">Kitchen</button>
+      <button class="nav-button" data-view="admin">Overview</button>
+    </nav>
+    <div class="connection"><span id="connectionDot" class="status-dot"></span><span id="connectionText">Connecting</span></div>
+  </header>
+
+  <main>
+    <section id="customerView" class="view">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">YOUR TABLE. YOUR MENU. YOUR MOMENT.</p>
+          <h1>Good food.<br><em>Zero waiting.</em></h1>
+          <p class="hero-description">Discover the menu, order your favourites, and follow every step from kitchen to table.</p>
+          <a class="primary-link" href="#menu">Explore menu <span>↘</span></a>
+          <div class="hero-stats"><span><b>Freshly made</b><small>Prepared to order</small></span><span><b>Live updates</b><small>Kitchen to table</small></span></div>
+        </div>
+        <div class="hero-art" aria-label="Decorative food illustration">
+          <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+          <div class="plate"><span>🍕</span></div>
+          <div class="floating-card card-top"><span>✦</span> Fresh & delicious</div>
+          <div class="floating-card card-bottom"><span class="mini-dot"></span> Made with care</div>
+          <div class="art-spark spark-one">✳</div><div class="art-spark spark-two">✦</div>
+        </div>
+      </section>
+
+      <section class="menu-section" id="menu">
+        <div class="section-heading">
+          <div><p class="eyebrow">MADE FOR YOUR CRAVINGS</p><h2>Explore our menu</h2><p class="muted">A little something for every appetite.</p></div>
+          <div class="table-field"><label for="tableNumber">Your table</label><input id="tableNumber" type="number" min="1" max="200" value="1"></div>
+        </div>
+        <div class="menu-tools">
+          <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search dishes..." aria-label="Search dishes"></label>
+          <div id="categoryFilters" class="filter-list" aria-label="Filter menu categories"></div>
+        </div>
+        <div id="menuGrid" class="menu-grid"><p class="muted">Loading menu…</p></div>
+      </section>
+
+      <section class="order-section">
+        <div class="section-heading compact-heading"><div><p class="eyebrow">YOUR SELECTION</p><h2>Your order</h2></div><span id="cartCount" class="count-pill">0 items</span></div>
+        <div class="cart-panel">
+          <div id="cartItems" class="cart-items"><p class="muted">Your cart is waiting for something delicious.</p></div>
+          <div class="cart-summary">
+            <label class="field-label" for="customerName">Name (optional)</label><input id="customerName" class="text-field" maxlength="80" placeholder="Name for the order">
+            <label class="field-label" for="orderNotes">Special instructions (optional)</label><textarea id="orderNotes" class="text-field" rows="2" maxlength="300" placeholder="Allergies or preparation notes"></textarea>
+            <div class="price-row"><span>Subtotal</span><b id="subtotal">₹0.00</b></div>
+            <div class="price-row"><span>Estimated tax (5%)</span><b id="tax">₹0.00</b></div>
+            <div class="price-row total-row"><span>Total</span><b id="total">₹0.00</b></div>
+            <button id="placeOrderButton" class="primary-button full-width" disabled>Place order <span>→</span></button>
+            <p class="tiny-note">Demo checkout · Payment is not collected in this version.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="trackingSection" class="tracking-section hidden">
+        <p class="eyebrow">ORDER CONFIRMED</p><h2>You're all set.</h2>
+        <p id="trackingIntro" class="muted"></p><div id="trackingTimeline" class="timeline"></div>
+      </section>
+    </section>
+
+    <section id="kitchenView" class="view hidden">
+      <div class="dashboard-heading"><div><p class="eyebrow">BACK OF HOUSE</p><h1>Kitchen <em>board.</em></h1><p class="muted">Move each order through the service workflow.</p></div><button class="secondary-button" id="refreshKitchen">↻ Refresh</button></div>
+      <div class="kitchen-stats" id="kitchenStats"></div>
+      <div id="kitchenOrders" class="kitchen-grid"></div>
+    </section>
+
+    <section id="adminView" class="view hidden">
+      <div class="dashboard-heading"><div><p class="eyebrow">RESTAURANT COMMAND CENTER</p><h1>Service at <em>a glance.</em></h1><p class="muted">A live snapshot of your restaurant's demo activity.</p></div><button class="secondary-button" id="refreshAdmin">↻ Refresh data</button></div>
+      <div id="analyticsCards" class="analytics-grid"></div>
+      <div class="admin-lower"><section class="panel"><div class="panel-heading"><div><p class="eyebrow">WHAT'S SELLING</p><h2>Popular dishes</h2></div></div><div id="popularItems"></div></section>
+      <section class="panel"><div class="panel-heading"><div><p class="eyebrow">LATEST ACTIVITY</p><h2>Recent orders</h2></div></div><div id="recentOrders"></div></section></div>
+      <p class="tiny-note">Demo only: secure this dashboard and its API routes with staff authentication before deployment.</p>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">E</span><span>E-SERVE <b>NEXUS</b><small>SMART DINING · SEAMLESS SERVICE</small></span></a><p>Thoughtfully served. Seamlessly managed.</p><span>© <span id="year"></span> E-SERVE Nexus</span></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

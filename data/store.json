@@ -1,0 +1,138 @@
+{
+  "menu": [
+    {
+      "id": "m1",
+      "name": "Paneer Tikka",
+      "category": "Starters",
+      "description": "Smoky paneer with mint chutney",
+      "price": 220,
+      "emoji": "🧀",
+      "available": true,
+      "vegetarian": true,
+      "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=900&q=85"
+    },
+    {
+      "id": "m2",
+      "name": "Crispy Corn",
+      "category": "Starters",
+      "description": "Crunchy corn with herbs and spices",
+      "price": 160,
+      "emoji": "🌽",
+      "available": true,
+      "vegetarian": true,
+      "image": "https://images.unsplash.com/photo-1551754655-cd27e38d2076?auto=format&fit=crop&w=900&q=85"
+    },
+    {
+      "id": "m3",
+      "name": "Classic Veg Burger",
+      "category": "Main Course",
+      "description": "Crispy patty, fresh lettuce, house sauce",
+      "price": 190,
+      "emoji": "🍔",
+      "available": true,
+      "vegetarian": true,
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85"
+    },
+    {
+      "id": "m4",
+      "name": "Margherita Pizza",
+      "category": "Main Course",
+      "description": "Mozzarella, basil, tomato",
+      "price": 299,
+      "emoji": "🍕",
+      "available": true,
+      "vegetarian": true,
+      "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=85"
+    },
+    {
+      "id": "m5",
+      "name": "Chicken Biryani",
+      "category": "Main Course",
+      "description": "Aromatic rice, spices, and chicken",
+      "price": 320,
+      "emoji": "🍛",
+      "available": true,
+      "vegetarian": false,
+      "image": "https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=900&q=85"
+    },
+    {
+      "id": "m6",
+      "name": "Dal Makhani",
+      "category": "Main Course",
+      "description": "Slow-cooked black lentils",
+      "price": 240,
+      "emoji": "🥘",
+      "available": true,
+      "vegetarian": true,
+      "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=900&q=85"
+    },
+    {
+      "id": "m7",
+      "name": "Chocolate Brownie",
+      "category": "Desserts",
+      "description": "Warm brownie with chocolate sauce",
+      "price": 140,
+      "emoji": "🍫",
+      "available": true,
+      "vegetarian": true,
+      "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=900&q=85"
+    },
+    {
+      "id": "m8",
+      "name": "Mango Cooler",
+      "category": "Beverages",
+      "description": "Chilled mango and lime drink",
+      "price": 95,
+      "emoji": "🥭",
+      "available": true,
+      "vegetarian": true,
+      "image": "https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=900&q=85"
+    }
+  ],
+  "orders": [
+    {
+      "id": "e3a0e27e-d391-467b-9f39-7238eb98d1d9",
+      "orderNumber": "ES-1093128",
+      "tableNumber": 1,
+      "customerName": "Guest",
+      "items": [
+        {
+          "id": "m1",
+          "name": "Paneer Tikka",
+          "price": 220,
+          "quantity": 1,
+          "lineTotal": 220
+        }
+      ],
+      "notes": "",
+      "subtotal": 220,
+      "tax": 11,
+      "total": 231,
+      "status": "Served",
+      "createdAt": "2026-10-13T08:44:53.128Z",
+      "updatedAt": "2026-10-13T08:45:36.891Z"
+    },
+    {
+      "id": "663caf8d-f821-48bc-8a38-73b5253e5d15",
+      "orderNumber": "ES-1915940",
+      "tableNumber": 1,
+      "customerName": "Zoya Fatima",
+      "items": [
+        {
+          "id": "m3",
+          "name": "Classic Veg Burger",
+          "price": 190,
+          "quantity": 1,
+          "lineTotal": 190
+        }
+      ],
+      "notes": "",
+      "subtotal": 190,
+      "tax": 9.5,
+      "total": 199.5,
+      "status": "Served",
+      "createdAt": "2026-10-13T08:58:35.940Z",
+      "updatedAt": "2026-10-13T08:59:19.151Z"
+    }
+  ]
+}
