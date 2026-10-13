@@ -8,7 +8,8 @@ A modern restaurant ordering and management web application built with HTML, CSS
 
 ### Homepage
 
-![E-SERVE Nexus Homepage](screenshots/homepage.png)
+![E-SERVE Nexus Homepage]("https://github.com/user-attachments/assets/595129d2-45ff-47b2-9aa5-e2fc88a644ac")
+
 
 ### Food Menu
 
