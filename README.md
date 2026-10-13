@@ -8,24 +8,28 @@ A modern restaurant ordering and management web application built with HTML, CSS
 
 ### Homepage
 
-![E-SERVE Nexus Homepage]("https://github.com/user-attachments/assets/595129d2-45ff-47b2-9aa5-e2fc88a644ac")
+![E-SERVE Nexus Homepage](https://github.com/user-attachments/assets/595129d2-45ff-47b2-9aa5-e2fc88a644ac)
 
 
 ### Food Menu
 
-![E-SERVE Nexus Food Menu](screenshots/menu.png)
+![E-SERVE Nexus Food Menu](https://github.com/user-attachments/assets/7740b9ec-56b1-4000-9c45-8348fd2c8e5a)
+
 
 ### Order Tracking
 
-![E-SERVE Nexus Order Tracking](screenshots/order-tracking.png)
+![E-SERVE Nexus Order Tracking](https://github.com/user-attachments/assets/4a851b21-7ff9-41b4-8c47-28745908e4a1)
+
 
 ### Kitchen Dashboard
 
-![E-SERVE Nexus Kitchen Dashboard](screenshots/kitchen-dashboard.png)
+![E-SERVE Nexus Kitchen Dashboard](https://github.com/user-attachments/assets/3ff6e41b-5388-431c-8698-99449fef04c4)
+
 
 ### Admin Dashboard
 
-![E-SERVE Nexus Admin Dashboard](screenshots/admin-dashboard.png)
+![E-SERVE Nexus Admin Dashboard](https://github.com/user-attachments/assets/83a409bb-56b0-4f1e-9e6e-f27cd6f873ef)
+
 
 ## Features
 
