@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # E-SERVE Nexus
 
 A beginner-friendly restaurant ordering MVP built with HTML, CSS, JavaScript, Node.js, Express, and Socket.IO.
@@ -52,3 +53,6 @@ eserve-nexus/
 
 ## QR table links
 A QR code can point to `https://your-deployed-domain.example/?table=5`. Locally, test with `http://localhost:3000/?table=5`.
+=======
+# E-Serve
+>>>>>>> 08753a2e1befcd544e1937472bf38c7d0a255521
