@@ -30,7 +30,8 @@ A modern restaurant ordering and management web application built with HTML, CSS
 
 ![E-SERVE Nexus Admin Dashboard](https://github.com/user-attachments/assets/83a409bb-56b0-4f1e-9e6e-f27cd6f873ef)
 
-
+## Deployed
+https://e-serve-nexus.onrender.com
 ## Features
 
 - **Interactive Menu:** Browse food items with images, descriptions, prices, and categories.
